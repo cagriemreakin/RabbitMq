@@ -1,0 +1,16 @@
+C:\Users\XpayDev\source\repos\RabbitMQ\RabbitMq.Publisher\bin\Debug\netcoreapp3.1\RabbitMq.Publisher.exe
+C:\Users\XpayDev\source\repos\RabbitMQ\RabbitMq.Publisher\bin\Debug\netcoreapp3.1\RabbitMq.Publisher.deps.json
+C:\Users\XpayDev\source\repos\RabbitMQ\RabbitMq.Publisher\bin\Debug\netcoreapp3.1\RabbitMq.Publisher.runtimeconfig.json
+C:\Users\XpayDev\source\repos\RabbitMQ\RabbitMq.Publisher\bin\Debug\netcoreapp3.1\RabbitMq.Publisher.runtimeconfig.dev.json
+C:\Users\XpayDev\source\repos\RabbitMQ\RabbitMq.Publisher\bin\Debug\netcoreapp3.1\RabbitMq.Publisher.dll
+C:\Users\XpayDev\source\repos\RabbitMQ\RabbitMq.Publisher\bin\Debug\netcoreapp3.1\RabbitMq.Publisher.pdb
+C:\Users\XpayDev\source\repos\RabbitMQ\RabbitMq.Publisher\obj\Debug\netcoreapp3.1\RabbitMq.Publisher.AssemblyInfoInputs.cache
+C:\Users\XpayDev\source\repos\RabbitMQ\RabbitMq.Publisher\obj\Debug\netcoreapp3.1\RabbitMq.Publisher.AssemblyInfo.cs
+C:\Users\XpayDev\source\repos\RabbitMQ\RabbitMq.Publisher\obj\Debug\netcoreapp3.1\RabbitMq.Publisher.csproj.CoreCompileInputs.cache
+C:\Users\XpayDev\source\repos\RabbitMQ\RabbitMq.Publisher\obj\Debug\netcoreapp3.1\RabbitMq.Publisher.dll
+C:\Users\XpayDev\source\repos\RabbitMQ\RabbitMq.Publisher\obj\Debug\netcoreapp3.1\RabbitMq.Publisher.pdb
+C:\Users\XpayDev\source\repos\RabbitMQ\RabbitMq.Publisher\obj\Debug\netcoreapp3.1\RabbitMq.Publisher.genruntimeconfig.cache
+C:\Users\XpayDev\source\repos\RabbitMQ\RabbitMq.Publisher\bin\Debug\netcoreapp3.1\RabbitMQ.Client.dll
+C:\Users\XpayDev\source\repos\RabbitMQ\RabbitMq.Publisher\bin\Debug\netcoreapp3.1\System.Threading.Channels.dll
+C:\Users\XpayDev\source\repos\RabbitMQ\RabbitMq.Publisher\obj\Debug\netcoreapp3.1\RabbitMq.Publisher.csproj.CopyComplete
+C:\Users\XpayDev\source\repos\RabbitMQ\RabbitMq.Publisher\obj\Debug\netcoreapp3.1\RabbitMq.Publisher.csprojAssemblyReference.cache
