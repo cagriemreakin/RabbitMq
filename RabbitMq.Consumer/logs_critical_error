@@ -3,3 +3,10 @@ log-Error
 log-Error
 log-Critical
 log-Critical
+log-Info-Critical-Warning
+log-Error-Error-Warning
+log-Info-Error-Warning
+log-Warning-Info-Warning
+log-Error-Warning-Warning
+log-Critical-Info-Warning
+log-Critical-Error-Warning

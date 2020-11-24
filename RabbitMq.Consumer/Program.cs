@@ -27,13 +27,12 @@ namespace RabbitMq.Consumer
                 using (var channel = connection.CreateModel())
                 {
                     //channel.QueueDeclare("task_queue", durable:true,exclusive: false,autoDelete: false, null);
-                    channel.ExchangeDeclare("direct_exchange", durable: true, type: ExchangeType.Direct);
+                    channel.ExchangeDeclare("topic_exchange", durable: true, type: ExchangeType.Topic);
 
                     var queueName = channel.QueueDeclare().QueueName;
-                    foreach(var item in Enum.GetNames(typeof(LogTypes)))
-                    {
-                      channel.QueueBind(queue:queueName, exchange: "direct_exchange", routingKey:item);
-                    }
+
+                    string routingKey = "#.Warning";
+                      channel.QueueBind(queue:queueName, exchange: "topic_exchange", routingKey:routingKey);
 
 
                     channel.BasicQos(prefetchSize:0,prefetchCount:1,global:false);

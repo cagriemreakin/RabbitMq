@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\XpayDev\\Source\\Repos\\cagriemreakin\\RabbitMq\\RabbitMq.Consumer\\RabbitMq.Consumer.csproj": {}
+    "C:\\Users\\XpayDev\\source\\repos\\cagriemreakin\\RabbitMq\\RabbitMq.Consumer\\RabbitMq.Consumer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\XpayDev\\Source\\Repos\\cagriemreakin\\RabbitMq\\RabbitMq.Consumer\\RabbitMq.Consumer.csproj": {
+    "C:\\Users\\XpayDev\\source\\repos\\cagriemreakin\\RabbitMq\\RabbitMq.Consumer\\RabbitMq.Consumer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\XpayDev\\Source\\Repos\\cagriemreakin\\RabbitMq\\RabbitMq.Consumer\\RabbitMq.Consumer.csproj",
+        "projectUniqueName": "C:\\Users\\XpayDev\\source\\repos\\cagriemreakin\\RabbitMq\\RabbitMq.Consumer\\RabbitMq.Consumer.csproj",
         "projectName": "RabbitMq.Consumer",
-        "projectPath": "C:\\Users\\XpayDev\\Source\\Repos\\cagriemreakin\\RabbitMq\\RabbitMq.Consumer\\RabbitMq.Consumer.csproj",
+        "projectPath": "C:\\Users\\XpayDev\\source\\repos\\cagriemreakin\\RabbitMq\\RabbitMq.Consumer\\RabbitMq.Consumer.csproj",
         "packagesPath": "C:\\Users\\XpayDev\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\XpayDev\\Source\\Repos\\cagriemreakin\\RabbitMq\\RabbitMq.Consumer\\obj\\",
+        "outputPath": "C:\\Users\\XpayDev\\source\\repos\\cagriemreakin\\RabbitMq\\RabbitMq.Consumer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

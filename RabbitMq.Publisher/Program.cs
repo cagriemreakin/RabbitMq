@@ -31,23 +31,27 @@ namespace RabbitMq.Publisher
                     //autoDelete kuyruktaki işlemler bittiğinde kuyruk silinsin mi?
 
                     //channel.QueueDeclare("task_queue",durable:true,false,false,null);
-                    channel.ExchangeDeclare("direct_exchange",durable:true,type:ExchangeType.Direct);
+                    channel.ExchangeDeclare("topic_exchange",durable:true,type:ExchangeType.Topic);
 
                     Array log_name_array = Enum.GetValues(typeof(LogTypes));
 
                     for (int i =1; i < 11; i++)
                     {
                         Random rnd = new Random();
-                        LogTypes log = (LogTypes) log_name_array.GetValue(rnd.Next(log_name_array.Length));
-                        byte[] body = Encoding.UTF8.GetBytes($"log-{log.ToString()}");
+                        LogTypes log1 = (LogTypes) log_name_array.GetValue(rnd.Next(log_name_array.Length));
+                        LogTypes log2 = (LogTypes)log_name_array.GetValue(rnd.Next(log_name_array.Length));
+                        LogTypes log3 = (LogTypes)log_name_array.GetValue(rnd.Next(log_name_array.Length));
+
+                        byte[] body = Encoding.UTF8.GetBytes($"log-{log1.ToString()}-{log2.ToString()}-{log3.ToString()}");
                         
                         //mesajların silinmememsini sağlıyor
                         var properties = channel.CreateBasicProperties();
                         properties.Persistent = true;
 
+                        string routingKey = $"{log1}.{log2}.{log3}";
                         //default exchange kullandığımız için ilkm parametre boş oldu
-                        channel.BasicPublish(exchange: "direct_exchange", routingKey:log.ToString(), properties, body);
-                        Console.WriteLine($"log-gonderildi.{log.ToString()}");
+                        channel.BasicPublish(exchange: "topic_exchange", routingKey:routingKey, properties, body);
+                        Console.WriteLine($"log-gonderildi.{routingKey}");
                     }
                    
 
