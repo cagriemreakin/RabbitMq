@@ -4,6 +4,13 @@ using System.Text;
 
 namespace RabbitMq.Publisher
 {
+    public enum LogTypes
+    {
+        Critical=1,
+        Error=2,
+        Info=3,
+        Warning=4
+    }
     class Program
     {
         static void Main(string[] args)
@@ -24,20 +31,23 @@ namespace RabbitMq.Publisher
                     //autoDelete kuyruktaki işlemler bittiğinde kuyruk silinsin mi?
 
                     //channel.QueueDeclare("task_queue",durable:true,false,false,null);
-                    channel.ExchangeDeclare("logs",durable:true,type:ExchangeType.Fanout);
-                    string message = GetMessage(args);
+                    channel.ExchangeDeclare("direct_exchange",durable:true,type:ExchangeType.Direct);
+
+                    Array log_name_array = Enum.GetValues(typeof(LogTypes));
 
                     for (int i =1; i < 11; i++)
                     {
-                        byte[] body = Encoding.UTF8.GetBytes($"{message}-{i}");
+                        Random rnd = new Random();
+                        LogTypes log = (LogTypes) log_name_array.GetValue(rnd.Next(log_name_array.Length));
+                        byte[] body = Encoding.UTF8.GetBytes($"log-{log.ToString()}");
                         
-                        //mesajların silinmememsini sağlaıyor
+                        //mesajların silinmememsini sağlıyor
                         var properties = channel.CreateBasicProperties();
                         properties.Persistent = true;
 
                         //default exchange kullandığımız için ilkm parametre boş oldu
-                        channel.BasicPublish(exchange: "logs", routingKey: "task_queue", properties, body);
-                        Console.WriteLine($"{message}-{i}-gonderildi.");
+                        channel.BasicPublish(exchange: "direct_exchange", routingKey:log.ToString(), properties, body);
+                        Console.WriteLine($"log-gonderildi.{log.ToString()}");
                     }
                    
 

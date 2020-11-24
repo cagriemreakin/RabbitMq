@@ -115,11 +115,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\XpayDev\\source\\repos\\RabbitMQ\\RabbitMq.Publisher\\RabbitMq.Publisher.csproj",
+      "projectUniqueName": "C:\\Users\\XpayDev\\source\\repos\\cagriemreakin\\RabbitMq\\RabbitMq.Publisher\\RabbitMq.Publisher.csproj",
       "projectName": "RabbitMq.Publisher",
-      "projectPath": "C:\\Users\\XpayDev\\source\\repos\\RabbitMQ\\RabbitMq.Publisher\\RabbitMq.Publisher.csproj",
+      "projectPath": "C:\\Users\\XpayDev\\source\\repos\\cagriemreakin\\RabbitMq\\RabbitMq.Publisher\\RabbitMq.Publisher.csproj",
       "packagesPath": "C:\\Users\\XpayDev\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\XpayDev\\source\\repos\\RabbitMQ\\RabbitMq.Publisher\\obj\\",
+      "outputPath": "C:\\Users\\XpayDev\\source\\repos\\cagriemreakin\\RabbitMq\\RabbitMq.Publisher\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

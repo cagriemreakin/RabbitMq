@@ -14,3 +14,6 @@ C:\Users\XpayDev\source\repos\RabbitMQ\RabbitMq.Consumer\bin\Debug\netcoreapp3.1
 C:\Users\XpayDev\source\repos\RabbitMQ\RabbitMq.Consumer\bin\Debug\netcoreapp3.1\System.Threading.Channels.dll
 C:\Users\XpayDev\source\repos\RabbitMQ\RabbitMq.Consumer\obj\Debug\netcoreapp3.1\RabbitMq.Consumer.csproj.CopyComplete
 C:\Users\XpayDev\source\repos\RabbitMQ\RabbitMq.Consumer\obj\Debug\netcoreapp3.1\RabbitMq.Consumer.csprojAssemblyReference.cache
+C:\Users\XpayDev\Source\Repos\cagriemreakin\RabbitMq\RabbitMq.Consumer\bin\Debug\netcoreapp3.1\RabbitMq.Consumer.exe
+C:\Users\XpayDev\Source\Repos\cagriemreakin\RabbitMq\RabbitMq.Consumer\bin\Debug\netcoreapp3.1\RabbitMq.Consumer.dll
+C:\Users\XpayDev\Source\Repos\cagriemreakin\RabbitMq\RabbitMq.Consumer\bin\Debug\netcoreapp3.1\RabbitMQ.Client.dll

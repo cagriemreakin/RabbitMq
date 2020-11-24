@@ -1,11 +1,19 @@
 ﻿using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using System;
+using System.IO;
 using System.Text;
 using System.Threading;
 
 namespace RabbitMq.Consumer
 {
+    public enum LogTypes
+    {
+        Critical = 1,
+        Error = 2,
+        //Info = 3,
+        //Warning = 4
+    }
     class Program
     {
         static void Main(string[] args)
@@ -19,10 +27,14 @@ namespace RabbitMq.Consumer
                 using (var channel = connection.CreateModel())
                 {
                     //channel.QueueDeclare("task_queue", durable:true,exclusive: false,autoDelete: false, null);
-                    channel.ExchangeDeclare("logs", durable: true, type: ExchangeType.Fanout);
-                    var queueName = channel.QueueDeclare().QueueName;
+                    channel.ExchangeDeclare("direct_exchange", durable: true, type: ExchangeType.Direct);
 
-                    channel.QueueBind(queue:queueName, exchange:"logs", routingKey:"");
+                    var queueName = channel.QueueDeclare().QueueName;
+                    foreach(var item in Enum.GetNames(typeof(LogTypes)))
+                    {
+                      channel.QueueBind(queue:queueName, exchange: "direct_exchange", routingKey:item);
+                    }
+
 
                     channel.BasicQos(prefetchSize:0,prefetchCount:1,global:false);
 
@@ -34,11 +46,14 @@ namespace RabbitMq.Consumer
 
                     consumer.Received += (model, ea) => {
 
-                        var message = Encoding.UTF8.GetString(ea.Body.ToArray());
-                        Console.WriteLine("Log alındı {0}", message);
+                        var log = Encoding.UTF8.GetString(ea.Body.ToArray());
+                        Console.WriteLine($"Log alındı {log}");
 
                         int time = int.Parse(GetMessage(args));
                         Thread.Sleep(time);
+
+                        File.AppendAllText("logs_critical_error", log + "\n");
+
                         Console.WriteLine("Log bitti.");
                         channel.BasicAck(ea.DeliveryTag,multiple:false);
                     };
